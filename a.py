@@ -36,7 +36,7 @@ def takeCommand():
 sheet_id='1nFE-K6TH_qzybFgPFK-idvUUISaT0nZ6gnHHdIXklbo'
 
 df= pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv")
-a=df.set_index('Organization name').T.to_dict('list')
+a=df.set_index('Organization name').T.to_dict('list')  #converting pandas dataframe to a python dictionary
 
 print(type(a.values()))
 print(a.keys())
